@@ -32,6 +32,7 @@ Discourse::Application.configure do
       user_name: GlobalSetting.smtp_user_name,
       password: GlobalSetting.smtp_password,
       authentication: GlobalSetting.smtp_authentication,
+      ca_file: "/etc/ssl/certs/ca-certificates.crt",
       enable_starttls_auto: GlobalSetting.smtp_enable_start_tls
     }
 
