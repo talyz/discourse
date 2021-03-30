@@ -26,6 +26,8 @@ class SiteSetting < ActiveRecord::Base
     end
   end
 
+  load_settings(File.join(Rails.root, 'config', 'nixos_site_settings.json'))
+
   setup_deprecated_methods
   client_settings << :available_locales
 
