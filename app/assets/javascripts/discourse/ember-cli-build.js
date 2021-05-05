@@ -40,6 +40,10 @@ module.exports = function (defaults) {
     files: ["resumable.js"],
   });
 
+  let start = funnel("public/assets/scripts", {
+    files: ["start-app.js", "discourse-boot.js"],
+  });
+
   return mergeTrees([
     discourseScss(`${discourseRoot}/app/assets/stylesheets`, "testem.scss"),
     createI18nTree(discourseRoot, vendorJs),
@@ -55,5 +59,6 @@ module.exports = function (defaults) {
       })
     ),
     digest(prettyTextEngine(vendorJs, "discourse-markdown")),
+    digest(concat(start, { outputFile: `assets/start-discourse.js` })),
   ]);
 };
