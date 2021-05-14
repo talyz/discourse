@@ -70,7 +70,7 @@ class CategoriesController < ApplicationController
   end
 
   def categories_and_latest
-    return render(body: nil, status: 500)
+    return render(body: nil, status: 400)
     categories_and_topics(:latest)
   end
 

@@ -1,0 +1,16 @@
+.error-state {
+  margin: 0;
+  padding: 0.5em 1em 1.5em 1em;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  .face {
+    font-size: $font-up-5;
+  }
+
+  .reason {
+    font-weight: 700;
+    font-size: $font-up-1;
+  }
+}
